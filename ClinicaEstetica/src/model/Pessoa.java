@@ -1,12 +1,16 @@
 package model;
+
 public class Pessoa {
+
     private int id;
     private String nome;
     private String dataNascimento;
     private String email;
     private String rg;
 
-    public Pessoa() {}
+    public Pessoa() {
+    }
+
     public Pessoa(String nome, String dataNascimento, String email, String rg) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
@@ -56,6 +60,11 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa{" + "id=" + id + ", nome=" + nome + ", dataNascimento=" + dataNascimento + ", email=" + email + ", rg=" + rg + '}';
+        return this.getId() + ", "
+                + this.getNome() + ", "
+                + this.getDataNascimento() + ", "
+                + this.getRg() + ", "
+                + this.getEmail() + ", ";
+
     }
 }

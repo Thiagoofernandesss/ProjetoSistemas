@@ -1,11 +1,14 @@
 package model;
 
 public class Cliente extends Pessoa {
+
     private String cep;
     private String telefone;
     private String endereco;
 
-    public Cliente() {}
+    public Cliente() {
+    }
+
     public Cliente(String cep, String telefone, String endereco, String nome, String dataNascimento, String email, String rg) {
         super(nome, dataNascimento, email, rg);
         this.cep = cep;
@@ -39,6 +42,9 @@ public class Cliente extends Pessoa {
 
     @Override
     public String toString() {
-        return "Cliente{" + "cep=" + cep + ", telefone=" + telefone + ", endereco=" + endereco + '}';
+        return this.getCep() + ", "
+                + this.getTelefone() + ", "
+                + this.getEndereco() + ", ";
     }
+
 }

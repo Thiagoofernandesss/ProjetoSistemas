@@ -1,11 +1,14 @@
 package model;
 
 public class Servico {
+
     private int id;
     private String descricao;
     private float valor;
 
-    public Servico() {}
+    public Servico() {
+    }
+
     public Servico(String descricao, float valor) {
         this.descricao = descricao;
         this.valor = valor;
@@ -37,6 +40,9 @@ public class Servico {
 
     @Override
     public String toString() {
-        return "Servico{" + "id=" + id + ", descricao=" + descricao + ", valor=" + valor + '}';
+        return this.getId() + ", "
+                + this.getDescricao() + ", "
+                + this.getValor();
+
     }
 }

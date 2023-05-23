@@ -7,6 +7,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Agendamento {
+
     private int id;
     private Cliente cliente;
     private Servico servico;
@@ -16,7 +17,9 @@ public class Agendamento {
     private String observacao;
     private Usuario funcionario;
 
-    public Agendamento() {}
+    public Agendamento() {
+    }
+
     public Agendamento(Cliente cliente, Servico servico, float valor, String data, String hora, String observacao, Usuario funcionario) {
         this.cliente = cliente;
         this.servico = servico;
@@ -24,8 +27,8 @@ public class Agendamento {
         this.hora = hora;
         this.observacao = observacao;
         this.funcionario = funcionario;
-        this.data= data;
-        
+        this.data = data;
+
     }
 
     public int getId() {
@@ -94,7 +97,14 @@ public class Agendamento {
 
     @Override
     public String toString() {
-        return "Agendamento{" + "id=" + id + ", cliente=" + cliente + ", servico=" + servico + ", valor=" + valor + ", data=" + data + ", hora=" + hora + ", observacao=" + observacao + ", funcionario=" + funcionario + '}';
+        return this.getId() + ", "
+                + this.getCliente() + ", "
+                + this.getServico() + ", "
+                + this.getValor() + ", "
+                + this.getData() + ", "
+                + this.getHora() + ", "
+                + this.getObservacao() + ", "
+                + this.getFuncionario();
     }
-    
+
 }

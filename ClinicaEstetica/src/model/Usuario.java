@@ -1,11 +1,14 @@
 package model;
 
 public class Usuario extends Pessoa {
+
     private String cpf;
     private String senha;
     private String nivelAcesso;
 
-    public Usuario() {}
+    public Usuario() {
+    }
+
     public Usuario(String cpf, String senha, String nivelAcesso, String nome, String dataNascimento, String email, String rg) {
         super(nome, dataNascimento, email, rg);
         this.cpf = cpf;
@@ -39,6 +42,8 @@ public class Usuario extends Pessoa {
 
     @Override
     public String toString() {
-        return "Usuario{" + "cpf=" + cpf + ", senha=" + senha + ", nivelAcesso=" + nivelAcesso + '}';
+        return this.getCpf() + ", "
+                + this.getSenha() + ", "
+                + this.getNivelAcesso();
     }
 }
